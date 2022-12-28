@@ -1,0 +1,42 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": ["plugin:import/recommended"],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": [
+            "error"
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "ts": "never"
+            }
+        ],
+        "@typescript-eslint/naming-convetion":[
+            "error",
+            {
+                "selector": "interface",
+                "format": "PascalCase",
+                "custom":{
+                    "regex":"^I[A-Z]",
+                    "match": true
+                }
+            }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+          "typescript": {}
+        }
+    }
+}
